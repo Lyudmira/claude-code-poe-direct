@@ -24,6 +24,20 @@
 
 Poe 现在已经官方提供 Claude Code 接入说明，以及 Anthropic-compatible `/v1/messages` 接口。
 
+与此同时，如果你的目标本来就是通过 Poe 使用官方 Claude 模型，那么这条直连路径本身也有明确的成本意义。
+
+Claude.ai 订阅在 Claude Opus 这类重度使用场景下往往不便宜；而 Poe 作为 Anthropic 的大客户，长期以不同的订阅和积分体系提供 Claude 访问能力。对很多只想继续用 Claude、但希望把成本压低的用户来说，Poe 直连本身就是最直接的切换理由。
+
+## 背景：为什么要绕开官方订阅？
+
+Claude.ai 订阅对 Claude Opus 收取高额倍率费用。
+
+重度用户，尤其是在 Claude Code 中跑长上下文编程任务时，每月 API 费用很容易冲到数百美元。
+
+Poe 平台作为 Anthropic 的大客户，长期以自己的订阅和积分体系提供 Claude 访问能力。对“仍然只想用官方 Claude 模型，但希望成本和接入路径更可控”的场景来说，Poe 直连本身就是一个很自然的替代方案。
+
+既然 Poe 现在已经公开提供官方 Anthropic-compatible 直连路径，那么在这个轻量仓库里，就没必要再保留额外的本地代理层。
+
 如果目标只是：
 
 - 让 Claude Code 通过 Poe 使用 Claude
@@ -62,6 +76,8 @@ Claude Code 直接用它原生的 Anthropic-compatible 协议去访问 Poe。
 2. 已有 Poe 账号。
 3. 已在 https://poe.com/api/keys 获取 Poe API Key。
 4. 本机有 Python 3，用来运行辅助脚本。
+
+如果你的主要动机就是“继续在 Claude Code 里用 Claude，但希望走 Poe 的计费路径”，那么这个轻量仓库就是更准确的落点。
 
 ---
 

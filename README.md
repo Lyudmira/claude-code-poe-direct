@@ -24,6 +24,18 @@ This is the clean counterpart to the heavier proxy-based setup.
 
 Poe now officially documents a Claude Code integration path through its Anthropic-compatible API.
 
+That direct path also has a straightforward pricing story. If your goal is still to use official Claude models, but through Poe's billing path instead of the default Claude subscription path, this lightweight repository is the honest minimal version of that setup.
+
+For many users, that is the real appeal: keep using Claude in Claude Code, but do it through Poe's account and pricing model rather than through a heavier local proxy arrangement.
+
+## Background: Why Switch Away From The Default Subscription?
+
+Claude usage can get expensive quickly, especially long-context Claude Code sessions on Opus-class models.
+
+For users who still want official Claude models, but would rather access them through Poe's account and pricing path, the direct Poe route is often the simplest reason to switch.
+
+Now that Poe exposes an official Anthropic-compatible path, this lightweight repository does not need to keep a local proxy layer at all.
+
 That means a local compatibility proxy is no longer required if your only goal is:
 
 - using Claude Code through Poe
@@ -60,6 +72,8 @@ Claude Code speaks its normal Anthropic-compatible protocol directly to Poe.
 2. You have a Poe account.
 3. You have a Poe API key from https://poe.com/api/keys.
 4. Python 3 is available to run the helper scripts.
+
+If your main motivation is simply lower-friction or lower-cost Claude access through Poe, this repository is the right place for that story.
 
 ---
 
